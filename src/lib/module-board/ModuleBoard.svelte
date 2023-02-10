@@ -1,9 +1,9 @@
 <script lang="ts">
 
-    import type PageEntry from "./PageEntry";
+    import type PageEntry from "../module-page/PageEntry";
     import {SvelteComponent} from "svelte";
-    import type DialogEntry from "./module-dialog/DialogEntry";
-    import ModuleDialog from "./module-dialog/ModuleDialog.svelte";
+    import type DialogEntry from "../module-dialog/DialogEntry";
+    import ModuleDialog from "../module-dialog/ModuleDialog.svelte";
     import ModulePage from "./ModulePage.svelte";
 
     let className: string = '';
@@ -74,6 +74,7 @@
         }
     }
 
+    export {push, pop, showDialog};
 
     export let board:any = {
         push, pop, showDialog

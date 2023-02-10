@@ -1,5 +1,4 @@
 <script lang="ts">
-
     export let width: string = "600px";
     export let height: string = "400px";
     export let title: string = '';
@@ -13,6 +12,8 @@
         <slot/>
     </div>
     <div class="dialog-control-bar">
-        <slot name="control-bar"/>
+        <slot name="control-bar">
+
+        </slot>
     </div>
 </div>
