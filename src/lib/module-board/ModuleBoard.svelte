@@ -1,6 +1,6 @@
 <script lang="ts">
 
-    import type PageEntry from "../module-page/PageEntry";
+    import type PageEntry from "./PageEntry";
     import {SvelteComponent} from "svelte";
     import type DialogEntry from "../module-dialog/DialogEntry";
     import ModuleDialog from "../module-dialog/ModuleDialog.svelte";
@@ -97,7 +97,7 @@
     </div>
     {#if dialogs && dialogs.length > 0}
         {#each dialogs as entry, i}
-            <ModuleDialog on:close={(evt)=>{handleDialogCloseEvent(entry, evt.detail)}} props={entry.props}
+            <ModuleDialog on:close={(evt)=>{handleDialogCloseEvent(entry, evt.detail)}} {board} props={entry.props}
                          component={entry.component} />
         {/each}
     {/if}
